@@ -1,0 +1,8 @@
+<?php
+session_start();
+$_SESSION['email'] = 'ali@mq.edu.au';
+$_SESSION['loggedin'] = time();
+
+session_write_close();
+    
+header("location: main.php");

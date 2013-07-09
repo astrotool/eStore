@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>User registration page</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	text-align: center;
+}
+body {
+	background-color: #333;
+}
+body,td,th {
+	color: #FFF;
+}
+.sub #form1 table tr .TitleColor div {
+	color: #F0F;
+}
+.sub #form1 p strong {
+	font-style: italic;
+}
+.sub #form1 p strong {
+	color: #0C0;
+}
+.sub #form1 p {
+	font-style: italic;
+}
+.sub #form1 p strong {
+	color: #0C0;
+}
+.sub #form1 div {
+	font-style: italic;
+	color: #0F0;
+}
+-->
+</style>
+<script language="JavaScript" type="text/javascript" src="form_validate.js"></script>
+
+</head>
+
+<body class="sub">
+<form action="dboracle.php" method="post" name="form1" id="form1" onSubmit="return checkForm(this);"><div>COMP344 Assignment 1, 2012 by Ali Alavi - #40876144</div></p>
+  <table width="600" height="678" border="0" align="left" cellpadding="8">
+    <tr>
+      <td height="51" colspan="3" class="HeaderColor">        <h4 class="style1">Register for an account</h4>      </td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td nowrap="nowrap" class="LabelColor" style="text-align: right"><span class="LabelColor" style="text-align: right">Email</span></td>
+      <td colspan="2" class="TitleColor"><input type="text" id="email" name="email" size="50" /></td>
+    </tr>
+    <tr style="vertical-align: top; color: #390;">
+      <td width="26%" nowrap="nowrap" class="LabelColor" style="text-align: right">&nbsp;</td>
+      <td colspan="2" class="TitleColor"><div>Attention: A Macquarie University email address is required for resgisteration(ie. name@mq.ed.au)</div></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">
+        <label for="password"> Password</label>      </td>
+      <td colspan="2" class="TitleColor">        <input type="password" id="password" name="pass1" />      </td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td height="57" class="LabelColor" style="text-align: right">
+        <label for="confirmpassword"> Confirm<br />
+        Password</label>      </td>
+      <td colspan="2" class="TitleColor">
+        <input type="password" id="confirmpassword" name="pass2" />
+        <br /></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td height="38" class="LabelColor" style="text-align: right">        Name      </td>
+      <td width="35%" class="TitleColor">
+        <label for="first">First: </label>        <input type="text" id="first" name="fname" />      </td>
+      <td width="39%" align="left" valign="top" class="TitleColor">
+        <label for="last">Last: </label>        <input type="text" id="last" name="lname" />      </td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">&nbsp;</td>
+      <td colspan="2" class="TitleColor">&nbsp;</td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td height="38" valign="middle" class="LabelColor" style="text-align: right">        Gender      </td>
+      <td height="38" colspan="2" align="left" valign="middle">        <p class="TitleColor">
+          <label for="male">Male </label>
+          <input type="radio" id="male" name="radiobutton1" value="radiobutton" />
+          <label for="female">Female </label>
+        <input type="radio" id="female" name="radiobutton1" value="radiobutton" /></p>      </td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">Adress</td>
+      <td colspan="2"><label>
+        <input name="textfield7" type="text" size="30" maxlength="30" />
+      </label></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">City</td>
+      <td colspan="2"><input name="textfield72" type="text" size="30" maxlength="30" /></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">State</td>
+      <td colspan="2"><label>
+        <select name="select" size="1">
+          <option value="1">NSW</option>
+          <option value="2">ACT</option>
+          <option value="3">VIC</option>
+          <option value="4">TAS</option>
+          <option value="5">QLD</option>
+          <option value="6">NT</option>
+          <option value="7">SA</option>
+          <option value="8">WA</option>
+        </select>
+      </label></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor"><span class="LabelColor" style="text-align: right">Postcode</span></td>
+      <td colspan="2"><input type="text" size="4" maxlength="4" name="postcode"/></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor"><h5><span class="style1">Credit Card Information </span></h5></td>
+      <td colspan="2"><h5>&nbsp;</h5></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">Credit Card Type </td>
+      <td colspan="2"><select name="ccselect" size="1">
+        <option value="0" selected="selected">N/A</option>
+        <option value="1">Visa</option>
+        <option value="2">Mastercard</option>
+      </select>      </td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">Name on Card </td>
+      <td colspan="2"><label>
+        <input name="textfield" type="text" size="50" maxlength="50" />
+      </label></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">Card Number </td>
+      <td colspan="2"><label>
+        <input type="text" id="cardnum" name="cardnum" />
+      </label></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">Security Number </td>
+      <td colspan="2"><input name="textfield22" type="text" size="3" maxlength="3" /></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td style="text-align: right" class="LabelColor">Expitey Date </td>
+      <td colspan="2"><label>
+        <input name="textfield222" type="text" size="2" maxlength="2" />
+        <input name="textfield223" type="text" size="2" maxlength="2" />
+      </label></td>
+    </tr>
+    <tr style="vertical-align: top">
+      <td colspan="3">
+        <p class="StoryContentColor">&nbsp;</p>        
+        <p class="StoryContentColor"><em>Would you like to recieve email notification regarding updates and specials?</em> <br />
+          <label for="yes2">Yes </label>
+          <input type="radio" id="yes2" name="radiobutton3" value="radiobutton" checked="checked" />
+          <br />
+          <label for="no2">&nbsp;No </label>
+          <input type="radio" id="no2" name="radiobutton3" value="radiobutton" />
+        </p>      </td>
+    </tr>
+    <tr style="vertical-align: top" class="FooterColor">
+      <td colspan="3"><input type="submit" name="SubmitName" value="Submit" />
+        <input type="reset" name="SubmitName2" value="Reset" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
